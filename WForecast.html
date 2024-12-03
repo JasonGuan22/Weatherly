@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <link rel = "stylesheet" href= "WF.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class = "logo-container">
+        <img src = "Weatherly_Logo.jpeg" class = "logo">
+        <h1> Weatherly </h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id = "NBar">
+        <ul>
+            <li> <a href = "WFHome.html"> Home </a></li>
+            <li> <a href = "WForecast.html"> Weather Forecast </a></li>
+            <li> <a href = "WFPollution.html"> Air Pollution </a></li>
+            <li> <a href= "WFAbout.html"> About Us </a></li>
+            <li> <a href = "WFHelp.html"> Help </a></li>
+        </ul>
+     </nav>
+    <main>
+
+        <section class = "weather-info">
+            <h2 class = "WDetails"> Weather Details for <span id = "location-name"> [Location] </span></h2>
+
+            <div id = "forecast-container" class = "forecast-grid">
+                <p> </p>
+                <p> </p>
+                <p> </p>
+                <p> </p>
+
+                <!-- Forecast data will be dynamically loaded here -->
+
+            </div>
+
+        </section>
+
+        <section class = "map-container">
+            <h2 class = "MapTitle"> Weather Map </h2>
+            <div id = "map"> 
+
+                <!-- The basic weather map in the API will be dynamically loaded here -->
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy; 2024 Weather App. All Rights Reserved. </p>
+    </footer>
+</body>
+</html>
