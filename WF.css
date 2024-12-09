@@ -1,18 +1,19 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom, #4facfe, #00f2fe);
-  color: #333;
-}
-header {
-  background-color: #0078d7;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: #333;
 }
 
+header {
+    background-color: #0078d7;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    flex-direction: column;
+}
+    
 .logo-container {
     display: flex;
     align-items: center;
@@ -30,12 +31,12 @@ header h1 {
 }
 
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 #NBar {
@@ -70,58 +71,58 @@ header h1 {
 }
 
 .form-section {
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
 }
 .form-section form {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 .form-section input[type="text"] {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 .form-section button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #0078d7;
-  color: white;
-  cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #0078d7;
+    color: white;
+    cursor: pointer;
 }
 .form-section button:hover {
-  background-color: #005bb5;
+    background-color: #005bb5;
 }
 .weather-section {
-  padding: 1rem;
-  text-align: center;
+    padding: 1rem;
+    text-align: center;
 }
 .weather-info {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-around;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-around;
 }
 .weather-card {
-  background: #f0f0f0;
-  padding: 1rem;
-  border-radius: 6px;
-  text-align: center;
-  width: 30%;
-  margin: 5px;
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    width: 30%;
+    margin: 5px;
 }
 .weather-card h3 {
-  margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #0078d7;
-  color: white;
-  margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #0078d7;
+    color: white;
+    margin-top: 2rem;
 }
 
 .pollution-section {
@@ -488,11 +489,67 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.forecast-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+.weather-info {
+    text-align: center;
 }
+
+.forcast-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for the Weather Details heading */
+.WDetails {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Location name styling, I made it blue! */
+#location-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Main container styling */
+#forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* Styling for each weather-card */
+.weather-card {
+    flex: 30%;
+    /* Default to 3 columns */
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* This makes the first card in the first row span the entire row */
+.weather-card:first-child {
+    flex: 1 1 100%;
+}
+
+.weather-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.weather-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
 
 .forecast-item {
     text-align: center;
@@ -502,7 +559,7 @@ footer {
     background-color: #eef;
 }
 
-.forecast-item img {
+    .forecast-item img {
     width: 50px;
     height: 50px;
 }
