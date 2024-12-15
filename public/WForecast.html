@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Weather Forecast</title>
+    <link rel = "stylesheet" href = "WF.css">
+    <script src = "WForecastPage.js"> </script>
+    <link rel = "stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity = "sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin =""/>
+    <script src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity = "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin = ""></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class = "logo-container">
+        <img src = "Weatherly_Logo.jpeg" class = "logo">
+        <h1> Weatherly </h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav id = "NBar">
+        <ul>
+            <li> <a href = "WFHome.html"> Home </a></li>
+            <li> <a href = "WForecast.html"> Weather Forecast </a></li>
+            <li> <a href = "WFPollution.html"> Air Pollution </a></li>
+            <li> <a href= "WFAbout.html"> About Us </a></li>
+            <li> <a href = "WFHelp.html"> Help </a></li>
+        </ul>
+     </nav>
+    <main>
+
+        <section class = "weather-info forcast-info">
+            <h2 class = "WDetails"> Weather Details for <span id = "location-name"> [Location] </span></h2>
+
+            <div id = "forecast-container" class = "forecast-grid">
+                <div class = "weather-card">
+                    <h3> Temperature </h3>
+                    <p> --°F </p>
+                </div>
+
+                <div class = "weather-card">
+                    <h3> Feels Like </h3>
+                    <p> --°F </p>
+                </div>
+
+                <div class = "weather-card">
+                    <h3>Min Temp</h3>
+                    <p>--°F</p>
+                </div>
+
+                <div class = "weather-card">
+                    <h3>Max Temp</h3>
+                    <p>--°F</p>
+                </div>
+
+                <div class = "weather-card">
+                    <h3>Pressure</h3>
+                    <p>-- hPa</p>
+                </div>
+
+                <div class = "weather-card">
+                    <h3>Humidity</h3>
+                    <p>--%</p>
+                </div>
+
+                <div class = "weather-card">
+                    <h3> Condition </h3>
+                    <p> -- </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Displaying the weather forecast map -->
+        <section class = "map-container">
+            <h2 class = "MapTitle"> Weather Map </h2>
+
+            <div id = "weather-map" style = "width: 100%; height: 500px;">
+
+
+            </div>
+
+        </section>
+
+    <!-- Understanding AQI -->
+    <section class = "help-section">
+        <div class = "help-topic">
+            <h3> Understanding Air Quality Index (AQI) </h3>
+            <p> The AQI is a standardized indicator used to communicate how polluted the air currently is or how polluted it 
+                is forecast to become. Here's a quick overview: </p>
+            <ul>
+                <li><span class = "aqi-legend good"></span> <strong> Good (0-50): </strong> Air quality is satisfactory, and air pollution 
+                    poses little or no risk.</li>
+                <li><span class = "aqi-legend moderate"></span> <strong> Moderate (51-100): </strong> Air quality is acceptable; however, 
+                    there may be a risk for some people, particularly those who are unusually sensitive to air pollution.</li>
+                <li><span class = "aqi-legend unhealthy-sensitive"></span> <strong> Unhealthy for Sensitive Groups (101-150):</strong> Members 
+                    of sensitive groups may experience health effects. The general public is less likely to be affected.</li>
+                <li><span class = "aqi-legend unhealthy"></span> <strong> Unhealthy (151-200): </strong> Everyone may begin to experience 
+                    health effects; members of sensitive groups may experience more serious health effects.</li>
+                <li><span class = "aqi-legend very-unhealthy"></span> <strong> Very Unhealthy (201-300):</strong> Health warnings of 
+                    emergency conditions. The entire population is more likely to be affected.</li>
+                <li><span class = "aqi-legend hazardous"></span> <strong> Hazardous (301-500): </strong> Health alert: everyone may experience 
+                    more serious health effects.</li>
+            </ul>
+        </div>
+    </section>
+
+    </main>
+
+    <footer>
+        <p> &copy; 2024 Weather App. All Rights Reserved. </p>
+    </footer>
+</body>
+</html>

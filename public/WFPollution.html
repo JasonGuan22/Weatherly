@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Air Pollution Page</title>
+        <link rel="stylesheet" href="WF.css">
+        <script defer src="WFPollutionPage.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    </head>
+
+    <body>
+        <!-- Header Section -->
+        <div class="logo-container">
+            <img src="Weatherly_Logo.jpeg" class="logo" alt="Weatherly Logo">
+            <h1>Weatherly</h1>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="NBar">
+            <ul>
+                <li><a href="WFHome.html">Home</a></li>
+                <li><a href="WForecast.html">Weather Forecast</a></li>
+                <li><a href="WFPollution.html" class="active">Air Pollution</a></li>
+                <li><a href="WFAbout.html">About Us</a></li>
+                <li><a href="WFHelp.html">Help</a></li>
+            </ul>
+        </nav>
+
+        <!-- Pollution Section -->
+        <main class="pollution-section" data-aos="fade-up">
+            <h2>Air Pollution Information</h2>
+            <p>Below is the air quality information for your selected location:</p>
+
+            <!-- Location Form Section -->
+            <div class="location-form-container">
+                <h3>Enter Your Location to Check Pollution Levels</h3>
+                <form id="pollutionForm" class="pollution-form">
+                    <input type="text" id="cityInput" placeholder="Enter city name or coordinates" required>
+                    <button type="submit">Get Pollution Data</button>
+                </form>
+            </div>
+
+            <!-- Air Quality Index Section -->
+            <div class="aqi-container">
+                <div class="aqi-card">
+                    <h3>Air Quality Index (AQI)</h3>
+                    <p class="aqi-value">--</p>
+                    <p class="aqi-status">Good / Moderate / Unhealthy</p>
+                </div>
+                <div class="aqi-card">
+                    <h3>Carbon Monoxide (CO)</h3>
+                    <p class="co-value">-- μg/m³</p>
+                </div>
+                <div class="aqi-card">
+                    <h3>Nitrogen Dioxide (NO₂)</h3>
+                    <p class="no2-value">-- μg/m³</p>
+                </div>
+                <div class="aqi-card">
+                    <h3>Sulfur Dioxide (SO₂)</h3>
+                    <p class="so2-value">-- μg/m³</p>
+                </div>
+            </div>
+
+            <!-- Pollution Chart Section -->
+            <div class="chart-container" data-aos="fade-in">
+                <h3>Pollution Data Breakdown</h3>
+                <canvas id="pollutionChart"></canvas>
+            </div>
+
+            <!-- Health Recommendations Section -->
+            <div class="health-tips" data-aos="fade-right">
+                <h3>Health Recommendations During High Levels of Air Pollution</h3>
+                <ul>
+                    <li>Limit outdoor activities during high air pollution levels.</li>
+                    <li>Use an air purifier indoors.</li>
+                    <li>Wear a mask if necessary when outside.</li>
+                    <li>Stay hydrated to flush out toxins from the air pollution.</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Weather Dashboard | Powered by Weatherly</p>
+        </footer>
+
+        <script>
+            AOS.init(); // Initialize AOS animations
+        </script>
+    </body>
+</html>
