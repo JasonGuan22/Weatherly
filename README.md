@@ -107,8 +107,7 @@ Once installed, use the following steps to start the application.
 
 ## Testing
 
-# 1. Unit Tests
-Unit tests focus on testing individual components or functions in isolation.
+# 1. Search Test
 
 ### Search Functionality:
 
