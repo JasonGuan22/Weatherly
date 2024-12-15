@@ -85,6 +85,7 @@ Follow these steps to set up the application and its dependencies on your local 
 This will install all required Node.js packages specified in `package.json`.
 
 4. **Verify Installation**:
+   
    Run the following command to verify all dependencies are installed:
    ```
    npm list
@@ -96,6 +97,7 @@ This will install all required Node.js packages specified in `package.json`.
 Once installed, use the following steps to start the application.
 
 1. **Start the Development Server**:
+   
    Run:
    ```
    npm start
@@ -105,16 +107,69 @@ Once installed, use the following steps to start the application.
 
 ## Testing
 
+# 1. Unit Tests
+Unit tests focus on testing individual components or functions in isolation.
 
+### Search Functionality:
 
+Test that the search bar correctly takes user input and sends the request to the backend.
+Example:
 
+Input: "Rockville"
+Expected Output: Correct API call with "Rockville" as the query.
 
+Weather Data Parsing:
+Verify that the weather data fetched from the API is parsed and displayed correctly.
+Example:
 
+Input: API response { "min temp": 34.1, "humidity": 87, "Feels like": 31, "max temp": 38.3 , "pressure": 1036, "condition": moderate rain}
 
+Expected Output: Displays  "min temp": 34.1°F, "humidity": 87%, "Feels like": 31°F, "max temp": 38.3°F , "pressure": 1036 hPa, "condition": moderate rain }
 
+# 2. Integration Tests
 
+Integration tests ensure components work well together.
 
+### Search and Display Flow:
 
+Test the flow from entering a location in the search bar to displaying weather and air quality information on the page.
+Example:
+
+Input: "Los Angeles"
+Expected Output: Correct data for Los Angeles, including temperature, humidity, and AQI.
+
+Interactive Map Rendering:
+Test if the map updates correctly based on the user's location search.
+Example:
+
+Input: "New York City"
+Expected Output: Map centers on New York City, with corresponding weather and AQI data displayed.
+
+### 3. API Endpoint Tests
+
+Test your server's API endpoints.
+
+GET /weather:
+Test the endpoint that fetches weather data.
+Example:
+
+Input: /weather?location=Chicago
+Expected Output: { "temperature": 65, "humidity": 40, "aqi": 25 }.
+
+GET /pollution:
+Test the endpoint that fetches air quality data.
+Example:
+
+Input: /pollution?location=Houston
+Expected Output: { "pm2_5": 15, "pm10": 35, "aqi": 75 }.
+
+Error Handling:
+Test for error responses, such as invalid locations or server errors.
+
+Example:
+
+Input: /weather?location=InvalidCity
+Expected Output: { "error": "Location not found" }.
 
 ## API Endpoints
 
@@ -122,6 +177,7 @@ Here are the endpoints used by the server-side application:
 
 ### **1. POST /city_searches**
 - **Purpose**: Logs the city searched by the user into the Supabase database.
+  
 - **Request Body**:
   ```json
   {
@@ -138,6 +194,7 @@ Here are the endpoints used by the server-side application:
 
 ### **2. GET /city_searches**
 - **Purpose**: Retrieves the most-searched cities from the database.
+  
 - **Response**:
   ```json
   [
